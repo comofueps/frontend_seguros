@@ -1,0 +1,22 @@
+<app-menu-auxiliar rutaDeseada="/documentos"></app-menu-auxiliar>
+<div>
+    <p-table [value]="documentos" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Tarjeta de propiedad</th>
+                <th>Ciudad de expedicion</th>
+                <th>ID Vehiculo </th>
+                <th>ID persona</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-documento>
+            <tr>
+
+                <td>{{ documento.tarjetaPropiedad }}</td>
+                <td>{{ documento.ciudadExp }}</td>
+                <td>{{ documento.VehiculoId }}</td>
+                <td>{{ documento.PersonaId }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

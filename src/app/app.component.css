@@ -1,0 +1,30 @@
+main{
+
+    display:grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 80px auto 50px;
+    grid-template-areas: 
+    "header header header"
+    "aside section section"
+    "footer footer footer";
+    height: 100vh;
+}
+
+header {
+    grid-area: header;    
+}
+
+aside {
+    grid-area: aside;
+    margin-top: 15px;
+}
+
+section {
+    grid-area: section;
+    margin: 0 10px;
+    margin-top: 15px;
+}
+
+footer {
+    grid-area: footer;
+}

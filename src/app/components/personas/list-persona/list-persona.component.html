@@ -1,0 +1,27 @@
+<app-menu-auxiliar rutaDeseada="/personas"></app-menu-auxiliar>
+<div>
+    <p-table [value]="personas" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Ciudad</th>
+                <th>Direccion</th>
+                <th>Tipo de persona</th>
+                <th>Telefono</th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-persona>
+            <tr>
+                <td>{{ persona.DNI }}</td>
+                <td>{{ persona.nombre }}</td>
+                <td>{{ persona.ciudad }}</td>
+                <td>{{ persona.direccion }}</td>
+                <td>{{ persona.tipoPersona }}</td>
+                <td>{{ persona.telefono }}</td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

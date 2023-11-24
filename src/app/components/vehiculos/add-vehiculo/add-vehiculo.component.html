@@ -1,0 +1,23 @@
+<app-menu-auxiliar rutaDeseada="/vehiculos" ></app-menu-auxiliar>
+<div class="contenedor">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>Registrar Vehiculos</h2>
+        <div>
+            <label for="matricula">Matricula</label>
+            <input type="text" id="matricula" formControlName="matricula" required >
+        </div>
+    
+        <div>
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" formControlName="marca" required>
+        </div>
+    
+        <div>
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" formControlName="modelo" required>
+        </div>
+    
+        <button type="submit">Enviar</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+    </form>
+</div>

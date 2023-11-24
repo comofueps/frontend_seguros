@@ -1,0 +1,28 @@
+<app-menu-auxiliar rutaDeseada="/multas"></app-menu-auxiliar>
+<div class="contenedor">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>Registrar Multas</h2>
+        <div>
+            <label for="PersonaID">DNI</label>
+            <input type="number" id="PersonaID" formControlName="PersonaID" required >
+        </div>
+
+        <div>
+            <label for="consecutivoMultas">Consecutivo de Multas</label>
+            <input type="text" id="consecutivoMultas" formControlName="consecutivoMultas" required>
+        </div>
+
+        <div>
+            <label for="fechayHora">Fecha y Hora</label>
+            <input type="datetime-local" id="fechayHora" formControlName="fechayHora" required>
+        </div>
+
+        <div>
+            <label for="lugarInfraccion">Lugar de Infracción</label>
+            <input type="text" id="lugarInfraccion" formControlName="lugarInfraccion" required>
+        </div>
+
+        <button type="submit">Enviar</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+    </form>
+</div>

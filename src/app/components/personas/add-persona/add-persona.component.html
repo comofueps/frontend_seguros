@@ -1,0 +1,86 @@
+<app-menu-auxiliar rutaDeseada="/personas"></app-menu-auxiliar>
+<div class="contenedor">
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>Registrar Personas</h2>
+        <div>
+            <label for="dni">DNI</label>
+            <input type="number" id="DNI" formControlName="DNI" required >
+        </div>
+
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" formControlName="nombre" required>
+        </div>
+
+        <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" formControlName="apellido" required>
+        </div>
+
+        <div>
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" formControlName="telefono" required>
+        </div>
+
+        <div>
+            <label for="direccion">Direccion</label>
+            <input type="text" id="direccion" formControlName="direccion" required>
+        </div>
+
+        <div>
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" formControlName="ciudad" required>
+        </div>
+        <div>
+            <label for="tipoPersona">Estado</label>
+            <select name="select" id="tipoPersona" formControlName="tipoPersona">
+                <option value="" selected>Seleccione una opcion</option>
+                <option value="Activo" >Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+        </div>
+
+        <!-- <div>
+            <label for="tipoPersona">Estado</label>
+            <input type="text" id="tipoPersona" formControlName="tipoPersona" required>
+        </div> -->
+
+        <button type="submit">Enviar</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+    </form>
+
+</div>
+
+
+<!-- <app-menu-auxiliar rutaDeseada="/personas" ></app-menu-auxiliar>
+<div class="contenedor">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>Registrar Persona</h2>
+        <label for="dni">DNI:</label>
+        <input type="number" id="dni" name="dni" formControlName="dni" required >
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" formControlName="nombre" required>
+
+        <label for="nombre">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" formControlName="apellido" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" formControlName="ciudad" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" formControlName="direccion" required>
+
+        <label for="tipoPersona">Tipo de Persona:</label>
+        <select name="select" id="tipoPersona" formControlName="tipoPersona">
+            <option value="null" selected>Seleccione una opcion</option>
+            <option value="Activo" >Activo</option>
+            <option value="Inactivo">Inactivo</option>
+        </select>     
+
+        <label for="telefono">teléfono:</label>
+        <input type="text" id="telefono" name="telefono" formControlName="telefono" required>
+        <input type="submit" value="Registrar">
+    </form>
+</div> -->

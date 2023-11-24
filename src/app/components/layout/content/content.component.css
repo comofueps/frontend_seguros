@@ -1,0 +1,42 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "titulo img"
+    "texto img";
+    padding: 10px;
+    /* height: 100%; */
+}
+
+.titulo{
+    grid-area: titulo;
+}
+
+.contenedor-texto{
+    grid-area: texto;
+}
+
+.contenedor-img{
+    grid-area: img;
+}
+
+.container .titulo{
+    text-align: center;
+    padding: 10px;
+}
+
+.container .contenedor-texto{
+    text-align: justify;
+    width: 500px;
+}
+
+.container .contenedor-img img{    
+    width: 100%;
+    height: auto;
+}
+
+.container .contenedor-img{
+    display: flex;
+    align-items: center;
+}

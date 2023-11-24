@@ -1,0 +1,19 @@
+<app-menu-auxiliar rutaDeseada="/involucrar"></app-menu-auxiliar>
+<div>
+    <p-table [value]="involucrados" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Hora</th>
+                <th>ID Persona</th>
+                <th>ID Vehiculo</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-involucrado>
+            <tr>
+                <td>{{ involucrado.hora }}</td>
+                <td>{{ involucrado.PersonaId }}</td>
+                <td>{{ involucrado.VehiculoId }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

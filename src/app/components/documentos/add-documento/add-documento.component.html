@@ -1,0 +1,31 @@
+<app-menu-auxiliar rutaDeseada="/documentos"></app-menu-auxiliar>
+<div class="contenedor">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>Registrar Documentos</h2>
+
+        <div>
+            <label for="tarjetaPropiedad">Tarjeta de Propiedad</label>
+            <input type="text" id="tarjetaPropiedad" formControlName="tarjetaPropiedad" required>
+        </div>
+
+        <div>
+            <label for="ciudadExp">Ciudad de Expedición</label>
+            <input type="text" id="ciudadExp" formControlName="ciudadExp" required>
+        </div>
+
+        <div>
+            <label for="PersonaId">DNI</label>
+            <input type="number" id="PersonaId" formControlName="PersonaId" required>
+        </div>
+
+        <div>
+            <label for="VehiculoId">Matricula</label>
+            <input type="number" id="VehiculoId" formControlName="VehiculoId" required>
+        </div>
+
+        <button type="submit">Enviar</button>
+        <button type="button" (click)="cancel()">Cancelar</button>
+    </form>
+
+</div>
